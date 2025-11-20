@@ -47,6 +47,23 @@
     "taxSavings": "Ahorro Fiscal",
     "perPeriod": "por {{period}}"
   },
+  "paycheckDetails": {
+    "title": "Desglose del Cheque de Pago",
+    "grossPay": "Pago Bruto",
+    "yourContribution": "Tu Contribución",
+    "employerMatch": "Contribución del Empleador",
+    "netPay": "Pago Neto"
+  },
+  "accountInfo": {
+    "title": "Información de la Cuenta",
+    "irsLimit": "Límite Anual del IRS 2024",
+    "includesCatchUp": "(incluye recuperación)",
+    "irsLimitDesc": "Contribución máxima del empleado para 2024",
+    "employerMatchRate": "Tasa de Contribución del Empleador",
+    "upTo": "hasta",
+    "employerMatchDesc": "Su empleador iguala sus contribuciones",
+    "noEmployerMatch": "No hay contribución del empleador disponible"
+  },
   "projection": {
     "title": "Proyección de Jubilación",
     "subtitle": "Basado en {{rate}} de retorno anual",

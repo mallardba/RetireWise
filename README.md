@@ -29,13 +29,14 @@ npm run install:all
 npm run dev
 
 # 3. Open your browser
-#    Desktop: http://localhost:5173
+#    Desktop: http://localhost:5173  or http://127.0.0.1:5173  
 #    Mobile: http://<your-local-ip>:5173
 ```
 
 The application will be available at:
 - **Frontend**: http://localhost:5173  
-      - If this doesn't work due to Windows networking issues, try usig 127.0.0.1 rather than localhost
+         - If this doesn't work due to Windows networking issues, it could be a bad DNS cache  
+         - Try usig 127.0.0.1 rather than localhost
 - **Backend API**: http://localhost:3001
 
 ### Running on Mobile

@@ -47,6 +47,23 @@
     "taxSavings": "税收节省",
     "perPeriod": "每 {{period}}"
   },
+  "paycheckDetails": {
+    "title": "工资明细",
+    "grossPay": "总工资",
+    "yourContribution": "您的供款",
+    "employerMatch": "雇主匹配",
+    "netPay": "实得工资"
+  },
+  "accountInfo": {
+    "title": "账户信息",
+    "irsLimit": "2024年 IRS 年度限额",
+    "includesCatchUp": "（包括追补）",
+    "irsLimitDesc": "2024年员工最高供款额",
+    "employerMatchRate": "雇主匹配率",
+    "upTo": "最多",
+    "employerMatchDesc": "您的雇主匹配您的供款",
+    "noEmployerMatch": "没有雇主匹配"
+  },
   "projection": {
     "title": "退休预测",
     "subtitle": "基于 {{rate}} 平均年回报率",

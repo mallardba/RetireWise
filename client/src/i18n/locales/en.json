@@ -47,6 +47,23 @@
     "taxSavings": "Tax Savings",
     "perPeriod": "per {{period}}"
   },
+  "paycheckDetails": {
+    "title": "Paycheck Breakdown",
+    "grossPay": "Gross Pay",
+    "yourContribution": "Your Contribution",
+    "employerMatch": "Employer Match",
+    "netPay": "Net Take-Home"
+  },
+  "accountInfo": {
+    "title": "Account Information",
+    "irsLimit": "2024 IRS Annual Limit",
+    "includesCatchUp": "(includes catch-up)",
+    "irsLimitDesc": "Maximum employee contribution for 2024",
+    "employerMatchRate": "Employer Match Rate",
+    "upTo": "up to",
+    "employerMatchDesc": "Your employer matches your contributions",
+    "noEmployerMatch": "No employer match available"
+  },
   "projection": {
     "title": "Retirement Projection",
     "subtitle": "Based on {{rate}} average annual return",

@@ -129,10 +129,6 @@ npm run dev:server
 npm run build
 ```
 
-## 📖 Additional Documentation
-
-See `SETUP.md` for detailed setup instructions and troubleshooting.
-
 ## 🎨 Design Philosophy
 
 - **Clarity over cleverness** - Every number instantly understandable

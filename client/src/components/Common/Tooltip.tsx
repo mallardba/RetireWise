@@ -26,10 +26,17 @@ export const Tooltip: React.FC<TooltipProps> = ({ content, children }) => {
       </button>
 
       {isVisible && (
-        <div className="absolute z-50 w-64 px-3 py-2 text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg left-0 mt-2 transform">
-          <div className="absolute -top-1 left-2 w-2 h-2 bg-white dark:bg-gray-800 border-l border-t border-gray-200 dark:border-gray-700 transform rotate-45"></div>
-          {content}
-        </div>
+        <>
+          {/* Mobile: fixed positioning, centered on viewport */}
+          <div className="fixed sm:hidden z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100vw-3rem)] max-w-xs px-4 py-3 text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl">
+            {content}
+          </div>
+          {/* Desktop: absolute positioning, next to icon */}
+          <div className="hidden sm:block absolute z-50 w-64 px-3 py-2 text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg left-0 mt-2">
+            <div className="absolute -top-1 left-2 w-2 h-2 bg-white dark:bg-gray-800 border-l border-t border-gray-200 dark:border-gray-700 transform rotate-45"></div>
+            {content}
+          </div>
+        </>
       )}
     </div>
   );

@@ -4,13 +4,21 @@ A modern, intuitive 401(k) contribution management application with real-time pr
 
 ## ✨ Features
 
-- 💰 **Flexible Contribution Settings** - Toggle between percentage or dollar amount
-- 📊 **Retirement Projections** - Visualize your retirement savings growth
-- 💵 **Paycheck Impact Analysis** - See how contributions affect your take-home pay
-- 📈 **Year-to-Date Tracking** - Monitor progress toward IRS limits
-- 🌍 **Multi-language Support** - English, Spanish, and Mandarin
-- ♿ **Accessible** - WCAG 2.1 AA compliant
-- 📱 **Mobile-First** - Responsive design works on all devices
+### Core Functionality
+- 💰 **Flexible Contribution Settings** - Toggle between percentage or dollar amount with precision controls
+- 🏢 **Employer Match Calculator** - Automatic calculation with industry-standard 50% match up to 6% of salary
+- 📊 **Retirement Projections** - Interactive chart visualizing savings growth with employer contributions included
+- 💵 **Paycheck Impact Analysis** - Real-time breakdown showing tax savings and actual take-home impact
+- 📈 **Year-to-Date Tracking** - Progress monitoring toward IRS contribution limits
+- ⚠️ **IRS Limit Validation** - Inline warnings when contributions exceed annual limits ($23,000 base, $30,500 with catch-up)
+
+### User Experience
+- 🌙 **Dark Mode** - Toggle between light and dark themes with persistent preferences
+- 🌍 **Multi-language Support** - Full internationalization in English, Spanish, and Chinese
+- ℹ️ **Educational Tooltips** - Contextual help explaining Traditional vs Roth, FICA, tax benefits, and more
+- 📄 **PDF Export** - Print-friendly summary reports for saving or sharing
+- ♿ **Fully Accessible** - Keyboard navigation, ARIA labels, and screen reader support
+- 📱 **Mobile Optimized** - Responsive design with mobile-centered tooltips and touch-friendly controls
 
 ## 🚀 Quick Start
 

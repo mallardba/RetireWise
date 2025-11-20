@@ -14,14 +14,14 @@ export const ContributionTypeToggle: React.FC<ContributionTypeToggleProps> = ({
   const { t } = useTranslation();
 
   return (
-    <div className="flex rounded-lg bg-gray-100 p-1">
+    <div className="flex rounded-lg bg-gray-100 dark:bg-gray-800 p-1">
       <button
         type="button"
         onClick={() => onChange(ContributionType.PERCENTAGE)}
         className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-colors touch-manipulation ${
           value === ContributionType.PERCENTAGE
-            ? 'bg-white text-primary shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-white dark:bg-gray-700 text-primary dark:text-primary-light shadow-sm'
+            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
         }`}
       >
         {t('contribution.type.percentage')}
@@ -31,8 +31,8 @@ export const ContributionTypeToggle: React.FC<ContributionTypeToggleProps> = ({
         onClick={() => onChange(ContributionType.DOLLAR)}
         className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-colors touch-manipulation ${
           value === ContributionType.DOLLAR
-            ? 'bg-white text-primary shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-white dark:bg-gray-700 text-primary dark:text-primary-light shadow-sm'
+            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
         }`}
       >
         {t('contribution.type.dollar')}

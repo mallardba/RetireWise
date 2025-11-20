@@ -45,30 +45,30 @@ export const PaycheckDetails: React.FC<PaycheckDetailsProps> = ({
         {/* Paycheck Breakdown */}
         <div className="space-y-3">
           <div className="flex justify-between items-center">
-            <span className="text-sm text-gray-600">{t('paycheckDetails.grossPay')}</span>
-            <span className="text-lg font-semibold text-gray-900">
+            <span className="text-sm text-gray-600 dark:text-gray-400">{t('paycheckDetails.grossPay')}</span>
+            <span className="text-lg font-semibold text-gray-900 dark:text-white">
               {Formatters.currencyPrecise(impact.grossPay, i18n.language)}
             </span>
           </div>
 
           <div className="flex justify-between items-center">
-            <span className="text-sm text-gray-600">{t('paycheckDetails.taxes')}</span>
-            <span className="text-lg font-semibold text-gray-500">
+            <span className="text-sm text-gray-600 dark:text-gray-400">{t('paycheckDetails.taxes')}</span>
+            <span className="text-lg font-semibold text-gray-500 dark:text-gray-400">
               -{Formatters.currencyPrecise(taxesDeducted, i18n.language)}
             </span>
           </div>
 
           <div className="flex justify-between items-center">
-            <span className="text-sm text-gray-600">{t('paycheckDetails.yourContribution')}</span>
-            <span className="text-lg font-semibold text-primary">
+            <span className="text-sm text-gray-600 dark:text-gray-400">{t('paycheckDetails.yourContribution')}</span>
+            <span className="text-lg font-semibold text-primary dark:text-primary-light">
               -{Formatters.currencyPrecise(impact.contribution, i18n.language)}
             </span>
           </div>
 
-          <div className="pt-3 border-t border-gray-200">
+          <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
             <div className="flex justify-between items-center">
-              <span className="text-sm font-medium text-gray-700">{t('paycheckDetails.netPay')}</span>
-              <span className="text-xl font-bold text-gray-900">
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('paycheckDetails.netPay')}</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">
                 {Formatters.currencyPrecise(impact.takeHomePay, i18n.language)}
               </span>
             </div>

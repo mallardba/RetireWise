@@ -101,5 +101,13 @@
     "loading": "Loading...",
     "save": "Save",
     "cancel": "Cancel"
+  },
+  "tooltips": {
+    "traditional": "Pre-tax contributions reduce your taxable income now. You'll pay taxes when you withdraw in retirement.",
+    "roth": "After-tax contributions mean you pay taxes now, but withdrawals in retirement are tax-free.",
+    "fica": "FICA (Federal Insurance Contributions Act) includes Social Security (6.2%) and Medicare (1.45%) taxes.",
+    "employerMatch": "Your employer contributes additional money to your 401(k) based on how much you contribute.",
+    "irsLimit": "The IRS sets annual limits on how much you can contribute to your 401(k). Those 50+ can contribute extra (catch-up contributions).",
+    "taxSavings": "Traditional 401(k) contributions reduce your taxable income, lowering the taxes you pay now."
   }
 }

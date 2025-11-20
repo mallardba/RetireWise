@@ -38,13 +38,13 @@ export const AmountInput: React.FC<AmountInputProps> = ({
             step={step}
             value={value}
             onChange={(e) => onChange(parseFloat(e.target.value))}
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary"
+            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary"
           />
         </div>
         <div className="w-32">
           <div className="relative">
             {prefix && (
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">
                 {prefix}
               </span>
             )}
@@ -55,7 +55,7 @@ export const AmountInput: React.FC<AmountInputProps> = ({
                 const newValue = parseFloat(e.target.value) || 0;
                 onChange(Math.min(Math.max(newValue, min), max));
               }}
-              className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-base ${
+              className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light text-base ${
                 prefix ? 'pl-7' : ''
               } ${suffix ? 'pr-8' : ''}`}
               min={min}
@@ -63,7 +63,7 @@ export const AmountInput: React.FC<AmountInputProps> = ({
               step={step}
             />
             {suffix && (
-              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">
                 {suffix}
               </span>
             )}

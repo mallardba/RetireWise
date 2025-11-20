@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/Common/Card';
 import { Button } from '@/components/Common/Button';
+import { Tooltip } from '@/components/Common/Tooltip';
 import { ContributionTypeToggle } from './ContributionTypeToggle';
 import { AmountInput } from './AmountInput';
 import { ContributionType, AccountType, LoadingState } from '@/enums';
@@ -89,7 +90,7 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
     <Card title={t('contribution.title')}>
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('contribution.type.label')}
           </label>
           <ContributionTypeToggle
@@ -100,7 +101,7 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
 
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
               {t('contribution.amount.label')}
             </label>
             {exceedsLimit && (
@@ -125,25 +126,25 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
+        <div className="grid grid-cols-2 gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <div>
-            <p className="text-sm text-gray-600">{t('contribution.annual')}</p>
-            <p className="text-lg sm:text-xl font-bold text-gray-900">
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('contribution.annual')}</p>
+            <p className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
               {Formatters.currency(annualContribution, i18n.language)}
             </p>
             {employerMatch.enabled && (
-              <p className="text-xs text-success mt-1">
+              <p className="text-xs text-success dark:text-green-400 mt-1">
                 +{Formatters.currency(annualEmployerMatch, i18n.language)} {t('contribution.employerMatch')}
               </p>
             )}
           </div>
           <div>
-            <p className="text-sm text-gray-600">{t('contribution.perPaycheck')}</p>
-            <p className="text-lg sm:text-xl font-bold text-gray-900">
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('contribution.perPaycheck')}</p>
+            <p className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
               {Formatters.currency(annualContribution / 26, i18n.language)}
             </p>
             {employerMatch.enabled && (
-              <p className="text-xs text-success mt-1">
+              <p className="text-xs text-success dark:text-green-400 mt-1">
                 +{Formatters.currency(employerMatchPerPaycheck, i18n.language)} {t('contribution.employerMatch')}
               </p>
             )}
@@ -151,7 +152,7 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-3">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
             {t('contribution.accountType.label')}
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -161,13 +162,16 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
               className={`p-4 rounded-lg border-2 transition-all touch-manipulation ${
                 settings.accountType === AccountType.TRADITIONAL
                   ? 'border-primary bg-primary/5'
-                  : 'border-gray-200 hover:border-gray-300'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
               }`}
             >
-              <p className="font-semibold text-gray-900">
-                {t('contribution.accountType.traditional')}
-              </p>
-              <p className="text-xs text-gray-600 mt-1">
+              <div className="flex items-center justify-between">
+                <p className="font-semibold text-gray-900 dark:text-white">
+                  {t('contribution.accountType.traditional')}
+                </p>
+                <Tooltip content={t('tooltips.traditional')} />
+              </div>
+              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                 {t('contribution.accountType.traditionalDesc')}
               </p>
             </button>
@@ -177,13 +181,16 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
               className={`p-4 rounded-lg border-2 transition-all touch-manipulation ${
                 settings.accountType === AccountType.ROTH
                   ? 'border-primary bg-primary/5'
-                  : 'border-gray-200 hover:border-gray-300'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
               }`}
             >
-              <p className="font-semibold text-gray-900">
-                {t('contribution.accountType.roth')}
-              </p>
-              <p className="text-xs text-gray-600 mt-1">
+              <div className="flex items-center justify-between">
+                <p className="font-semibold text-gray-900 dark:text-white">
+                  {t('contribution.accountType.roth')}
+                </p>
+                <Tooltip content={t('tooltips.roth')} />
+              </div>
+              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                 {t('contribution.accountType.rothDesc')}
               </p>
             </button>

@@ -28,20 +28,20 @@ export const YTDProgress: React.FC<YTDProgressProps> = ({
       <div className="space-y-4">
         <div>
           <div className="flex justify-between text-sm mb-2">
-            <span className="text-gray-600">{t('ytd.employee')}</span>
-            <span className="font-semibold">
+            <span className="text-gray-600 dark:text-gray-400">{t('ytd.employee')}</span>
+            <span className="font-semibold text-gray-900 dark:text-white">
               {Formatters.currency(ytdContributions.employee, i18n.language)}
             </span>
           </div>
           <div className="flex justify-between text-sm mb-2">
-            <span className="text-gray-600">{t('ytd.employer')}</span>
-            <span className="font-semibold">
+            <span className="text-gray-600 dark:text-gray-400">{t('ytd.employer')}</span>
+            <span className="font-semibold text-gray-900 dark:text-white">
               {Formatters.currency(ytdContributions.employer, i18n.language)}
             </span>
           </div>
-          <div className="flex justify-between text-base font-bold pt-2 border-t border-gray-200">
-            <span>{t('ytd.total')}</span>
-            <span className="text-primary">
+          <div className="flex justify-between text-base font-bold pt-2 border-t border-gray-200 dark:border-gray-700">
+            <span className="text-gray-900 dark:text-white">{t('ytd.total')}</span>
+            <span className="text-primary dark:text-primary-light">
               {Formatters.currency(ytdContributions.total, i18n.language)}
             </span>
           </div>
@@ -49,20 +49,20 @@ export const YTDProgress: React.FC<YTDProgressProps> = ({
 
         <div>
           <div className="flex justify-between text-sm mb-2">
-            <span className="text-gray-600">
+            <span className="text-gray-600 dark:text-gray-400">
               {t('ytd.progress', { percent: percentComplete.toFixed(1) })}
             </span>
-            <span className="text-gray-600">
+            <span className="text-gray-600 dark:text-gray-400">
               {Formatters.currency(maxLimit, i18n.language)}
             </span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-3">
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
             <div
-              className="bg-success h-3 rounded-full transition-all duration-300"
+              className="bg-success dark:bg-green-500 h-3 rounded-full transition-all duration-300"
               style={{ width: `${Math.min(percentComplete, 100)}%` }}
             />
           </div>
-          <p className="text-sm text-gray-600 mt-2">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
             {t('contribution.remaining')}: {Formatters.currency(remaining, i18n.language)}
           </p>
         </div>

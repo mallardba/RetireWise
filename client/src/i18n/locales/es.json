@@ -101,5 +101,13 @@
     "loading": "Cargando...",
     "save": "Guardar",
     "cancel": "Cancelar"
+  },
+  "tooltips": {
+    "traditional": "Las contribuciones antes de impuestos reducen su ingreso imponible ahora. Pagará impuestos al retirar en la jubilación.",
+    "roth": "Las contribuciones después de impuestos significa que paga impuestos ahora, pero los retiros en la jubilación están libres de impuestos.",
+    "fica": "FICA (Ley Federal de Contribuciones al Seguro) incluye impuestos del Seguro Social (6.2%) y Medicare (1.45%).",
+    "employerMatch": "Su empleador contribuye dinero adicional a su 401(k) según cuánto contribuya usted.",
+    "irsLimit": "El IRS establece límites anuales sobre cuánto puede contribuir a su 401(k). Los mayores de 50 pueden contribuir extra (contribuciones de recuperación).",
+    "taxSavings": "Las contribuciones 401(k) tradicionales reducen su ingreso imponible, disminuyendo los impuestos que paga ahora."
   }
 }

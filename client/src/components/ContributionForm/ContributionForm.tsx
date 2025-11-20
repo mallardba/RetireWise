@@ -39,7 +39,12 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
   );
 
   const annualEmployerMatch = employerMatch.enabled
-    ? (annualContribution * employerMatch.matchPercentage / 100)
+    ? CalculationUtils.calculateEmployerMatch(
+        annualContribution,
+        profile.salary,
+        employerMatch.matchPercentage,
+        employerMatch.capPercentage
+      )
     : 0;
 
   const employerMatchPerPaycheck = annualEmployerMatch / 26;

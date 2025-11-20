@@ -75,8 +75,11 @@
     "irsLimit": "2024 IRS Annual Limit",
     "includesCatchUp": "(includes catch-up)",
     "irsLimitDesc": "Maximum employee contribution for 2024",
-    "employerMatchRate": "Employer Match Rate",
+    "employerMatchRate": "Employer Match",
+    "match": "match",
     "upTo": "up to",
+    "ofSalary": "of salary",
+    "matchExplainer": "Contribute {{cap}}% or more to get the full {{effective}}% match",
     "employerMatchDesc": "Your employer matches your contributions",
     "noEmployerMatch": "No employer match available"
   },

@@ -81,11 +81,17 @@ export const AccountInfo: React.FC<AccountInfoProps> = ({
                 {employerMatch.matchPercentage}%
               </span>
               <span className="text-sm text-gray-600">
-                {t('accountInfo.upTo')} {employerMatch.capPercentage}%
+                {t('accountInfo.match')}
               </span>
             </div>
+            <p className="text-xs text-gray-500 mt-1">
+              {t('accountInfo.upTo')} {employerMatch.capPercentage}% {t('accountInfo.ofSalary')}
+            </p>
             <p className="text-xs text-gray-500 mt-2">
-              {t('accountInfo.employerMatchDesc')}
+              {t('accountInfo.matchExplainer', {
+                cap: employerMatch.capPercentage,
+                effective: (employerMatch.matchPercentage * employerMatch.capPercentage / 100).toFixed(1)
+              })}
             </p>
           </div>
         ) : (

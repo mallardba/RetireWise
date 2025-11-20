@@ -65,8 +65,8 @@ seedUser.run(
   5000,
   2000,
   1,
-  4,
-  6
+  50, // Match 50% of employee contributions
+  6   // Up to 6% of salary
 );
 
 export default db;

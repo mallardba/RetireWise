@@ -75,8 +75,11 @@
     "irsLimit": "Límite Anual del IRS 2024",
     "includesCatchUp": "(incluye recuperación)",
     "irsLimitDesc": "Contribución máxima del empleado para 2024",
-    "employerMatchRate": "Tasa de Contribución del Empleador",
+    "employerMatchRate": "Contribución del Empleador",
+    "match": "contribución",
     "upTo": "hasta",
+    "ofSalary": "del salario",
+    "matchExplainer": "Contribuya {{cap}}% o más para obtener la contribución completa del {{effective}}%",
     "employerMatchDesc": "Su empleador iguala sus contribuciones",
     "noEmployerMatch": "No hay contribución del empleador disponible"
   },

@@ -75,8 +75,11 @@
     "irsLimit": "2024年 IRS 年度限额",
     "includesCatchUp": "（包括追补）",
     "irsLimitDesc": "2024年员工最高供款额",
-    "employerMatchRate": "雇主匹配率",
+    "employerMatchRate": "雇主匹配",
+    "match": "匹配",
     "upTo": "最多",
+    "ofSalary": "的工资",
+    "matchExplainer": "供款{{cap}}%或更多可获得完整的{{effective}}%匹配",
     "employerMatchDesc": "您的雇主匹配您的供款",
     "noEmployerMatch": "没有雇主匹配"
   },

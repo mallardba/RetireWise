@@ -62,4 +62,22 @@ export class CalculationUtils {
   ): number {
     return (salary * percentage) / 100;
   }
+
+  /**
+   * Calculate employer match based on employee contribution
+   * Example: 50% match up to 6% of salary
+   * - If employee contributes 5% of salary, employer adds 2.5% (50% of 5%)
+   * - If employee contributes 8% of salary, employer adds 3% (50% of 6% cap)
+   */
+  static calculateEmployerMatch(
+    employeeContribution: number,
+    salary: number,
+    matchPercentage: number,
+    capPercentage: number
+  ): number {
+    const contributionPercent = (employeeContribution / salary) * 100;
+    const effectiveContributionPercent = Math.min(contributionPercent, capPercentage);
+    const matchAmount = (salary * effectiveContributionPercent / 100) * (matchPercentage / 100);
+    return matchAmount;
+  }
 }

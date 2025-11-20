@@ -89,6 +89,7 @@ export const Dashboard: React.FC = () => {
                 payFrequency={profile.payFrequency}
                 employerMatch={employerMatch}
                 annualContribution={annualContribution}
+                salary={profile.salary}
               />
             </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/Common/Card';
 import { Formatters } from '@/utils/formatters';
+import { CalculationUtils } from '@/utils/calculations';
 import { PAY_PERIODS_PER_YEAR, TAX_ASSUMPTIONS } from '@/constants';
 import type { PaycheckImpact, PayFrequency, EmployerMatch } from '@/types';
 
@@ -10,20 +11,28 @@ interface PaycheckDetailsProps {
   payFrequency: PayFrequency;
   employerMatch: EmployerMatch;
   annualContribution: number;
+  salary: number;
 }
 
 export const PaycheckDetails: React.FC<PaycheckDetailsProps> = ({
   impact,
   payFrequency,
   employerMatch,
-  annualContribution
+  annualContribution,
+  salary
 }) => {
   const { t, i18n } = useTranslation();
 
   const payPeriodsPerYear = PAY_PERIODS_PER_YEAR[payFrequency];
-  const employerContributionPerPaycheck = employerMatch.enabled
-    ? (annualContribution * employerMatch.matchPercentage / 100) / payPeriodsPerYear
+  const annualEmployerMatch = employerMatch.enabled
+    ? CalculationUtils.calculateEmployerMatch(
+        annualContribution,
+        salary,
+        employerMatch.matchPercentage,
+        employerMatch.capPercentage
+      )
     : 0;
+  const employerContributionPerPaycheck = annualEmployerMatch / payPeriodsPerYear;
 
   // Calculate actual taxes paid (after 401k tax benefit)
   // This is derived from: grossPay - contribution - taxes = takeHomePay

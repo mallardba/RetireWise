@@ -23,9 +23,14 @@ export const AmountInput: React.FC<AmountInputProps> = ({
     ? PERCENTAGE_LIMITS.MIN
     : 0;
 
-  const step = type === ContributionType.PERCENTAGE ? 0.5 : 100;
+  const step = type === ContributionType.PERCENTAGE ? 0.01 : 100;
   const prefix = type === ContributionType.DOLLAR ? '$' : '';
   const suffix = type === ContributionType.PERCENTAGE ? '%' : '';
+
+  // Format display value based on type
+  const displayValue = type === ContributionType.PERCENTAGE
+    ? value.toFixed(2)
+    : Math.round(value).toString();
 
   return (
     <div className="space-y-4">
@@ -50,10 +55,13 @@ export const AmountInput: React.FC<AmountInputProps> = ({
             )}
             <input
               type="number"
-              value={value}
+              value={displayValue}
               onChange={(e) => {
                 const newValue = parseFloat(e.target.value) || 0;
-                onChange(Math.min(Math.max(newValue, min), max));
+                const rounded = type === ContributionType.PERCENTAGE
+                  ? Math.round(newValue * 100) / 100
+                  : Math.round(newValue);
+                onChange(Math.min(Math.max(rounded, min), max));
               }}
               className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light text-base ${
                 prefix ? 'pl-7' : ''

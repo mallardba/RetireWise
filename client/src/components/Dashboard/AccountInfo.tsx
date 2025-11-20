@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/Common/Card';
 import { Formatters } from '@/utils/formatters';
-import { IRS_LIMITS } from '@/constants';
+import { IRS_LIMITS, TAX_ASSUMPTIONS } from '@/constants';
 import type { EmployerMatch } from '@/types';
 
 interface AccountInfoProps {
@@ -20,9 +20,36 @@ export const AccountInfo: React.FC<AccountInfoProps> = ({
     ? IRS_LIMITS.MAX_TOTAL_2024
     : IRS_LIMITS.MAX_CONTRIBUTION_2024;
 
+  const totalTaxRate = (TAX_ASSUMPTIONS.FEDERAL_TAX_RATE + TAX_ASSUMPTIONS.STATE_TAX_RATE + TAX_ASSUMPTIONS.FICA_TAX_RATE) * 100;
+
   return (
     <Card title={t('accountInfo.title')}>
       <div className="space-y-4">
+        {/* Tax Rate Info */}
+        <div className="bg-amber-50 rounded-lg p-4">
+          <p className="text-sm font-medium text-gray-700 mb-2">
+            {t('accountInfo.taxRates')}
+          </p>
+          <div className="space-y-1 text-xs text-gray-600">
+            <div className="flex justify-between">
+              <span>{t('accountInfo.federalTax')}</span>
+              <span className="font-medium">{Formatters.percentage(TAX_ASSUMPTIONS.FEDERAL_TAX_RATE * 100, 0)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>{t('accountInfo.stateTax')}</span>
+              <span className="font-medium">{Formatters.percentage(TAX_ASSUMPTIONS.STATE_TAX_RATE * 100, 0)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>{t('accountInfo.ficaTax')}</span>
+              <span className="font-medium">{Formatters.percentage(TAX_ASSUMPTIONS.FICA_TAX_RATE * 100, 1)}</span>
+            </div>
+            <div className="flex justify-between pt-1 border-t border-amber-200">
+              <span className="font-medium">{t('accountInfo.totalTax')}</span>
+              <span className="font-bold">{Formatters.percentage(totalTaxRate, 1)}</span>
+            </div>
+          </div>
+        </div>
+
         {/* IRS Limit Info */}
         <div className="bg-gray-50 rounded-lg p-4">
           <p className="text-sm font-medium text-gray-700 mb-2">

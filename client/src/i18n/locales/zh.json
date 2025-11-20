@@ -27,6 +27,7 @@
     },
     "annual": "年度供款",
     "perPaycheck": "每次工资",
+    "employerMatch": "雇主匹配",
     "irsLimit": "IRS 年度限额",
     "remaining": "剩余",
     "save": "更新供款",
@@ -55,12 +56,19 @@
   "paycheckDetails": {
     "title": "工资明细",
     "grossPay": "总工资",
+    "taxes": "税款",
     "yourContribution": "您的供款",
     "employerMatch": "雇主匹配",
+    "employerAdds": "雇主添加 {{amount}}",
     "netPay": "实得工资"
   },
   "accountInfo": {
     "title": "账户信息",
+    "taxRates": "税率",
+    "federalTax": "联邦",
+    "stateTax": "州",
+    "ficaTax": "FICA",
+    "totalTax": "总计",
     "irsLimit": "2024年 IRS 年度限额",
     "includesCatchUp": "（包括追补）",
     "irsLimitDesc": "2024年员工最高供款额",

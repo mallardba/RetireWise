@@ -70,6 +70,7 @@ export const Dashboard: React.FC = () => {
               initialSettings={contribution}
               onUpdate={updateContribution}
               loadingState={loadingState}
+              employerMatch={employerMatch}
             />
             <AccountInfo
               employerMatch={employerMatch}

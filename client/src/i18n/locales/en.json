@@ -27,6 +27,7 @@
     },
     "annual": "Annual Contribution",
     "perPaycheck": "Per Paycheck",
+    "employerMatch": "employer match",
     "irsLimit": "IRS Annual Limit",
     "remaining": "Remaining",
     "save": "Update Contribution",
@@ -55,12 +56,19 @@
   "paycheckDetails": {
     "title": "Paycheck Breakdown",
     "grossPay": "Gross Pay",
+    "taxes": "Taxes",
     "yourContribution": "Your Contribution",
     "employerMatch": "Employer Match",
+    "employerAdds": "Employer adds {{amount}}",
     "netPay": "Net Take-Home"
   },
   "accountInfo": {
     "title": "Account Information",
+    "taxRates": "Tax Rates",
+    "federalTax": "Federal",
+    "stateTax": "State",
+    "ficaTax": "FICA",
+    "totalTax": "Total",
     "irsLimit": "2024 IRS Annual Limit",
     "includesCatchUp": "(includes catch-up)",
     "irsLimitDesc": "Maximum employee contribution for 2024",

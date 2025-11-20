@@ -27,6 +27,7 @@
     },
     "annual": "Contribución Anual",
     "perPaycheck": "Por Cheque de Pago",
+    "employerMatch": "contribución del empleador",
     "irsLimit": "Límite Anual del IRS",
     "remaining": "Restante",
     "save": "Actualizar Contribución",
@@ -55,12 +56,19 @@
   "paycheckDetails": {
     "title": "Desglose del Cheque de Pago",
     "grossPay": "Pago Bruto",
+    "taxes": "Impuestos",
     "yourContribution": "Tu Contribución",
     "employerMatch": "Contribución del Empleador",
+    "employerAdds": "Empleador agrega {{amount}}",
     "netPay": "Pago Neto"
   },
   "accountInfo": {
     "title": "Información de la Cuenta",
+    "taxRates": "Tasas de Impuestos",
+    "federalTax": "Federal",
+    "stateTax": "Estatal",
+    "ficaTax": "FICA",
+    "totalTax": "Total",
     "irsLimit": "Límite Anual del IRS 2024",
     "includesCatchUp": "(incluye recuperación)",
     "irsLimitDesc": "Contribución máxima del empleado para 2024",

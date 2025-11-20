@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/Common/Card';
 import { Formatters } from '@/utils/formatters';
-import { PAY_PERIODS_PER_YEAR } from '@/constants';
+import { PAY_PERIODS_PER_YEAR, TAX_ASSUMPTIONS } from '@/constants';
 import type { PaycheckImpact, PayFrequency, EmployerMatch } from '@/types';
 
 interface PaycheckDetailsProps {
@@ -25,6 +25,11 @@ export const PaycheckDetails: React.FC<PaycheckDetailsProps> = ({
     ? (annualContribution * employerMatch.matchPercentage / 100) / payPeriodsPerYear
     : 0;
 
+  // Calculate actual taxes paid (after 401k tax benefit)
+  // This is derived from: grossPay - contribution - taxes = takeHomePay
+  // So: taxes = grossPay - contribution - takeHomePay
+  const taxesDeducted = impact.grossPay - impact.contribution - impact.takeHomePay;
+
   return (
     <Card title={t('paycheckDetails.title')}>
       <div className="space-y-4">
@@ -38,20 +43,18 @@ export const PaycheckDetails: React.FC<PaycheckDetailsProps> = ({
           </div>
 
           <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">{t('paycheckDetails.taxes')}</span>
+            <span className="text-lg font-semibold text-gray-500">
+              -{Formatters.currencyPrecise(taxesDeducted, i18n.language)}
+            </span>
+          </div>
+
+          <div className="flex justify-between items-center">
             <span className="text-sm text-gray-600">{t('paycheckDetails.yourContribution')}</span>
             <span className="text-lg font-semibold text-primary">
               -{Formatters.currencyPrecise(impact.contribution, i18n.language)}
             </span>
           </div>
-
-          {employerMatch.enabled && (
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">{t('paycheckDetails.employerMatch')}</span>
-              <span className="text-lg font-semibold text-success">
-                +{Formatters.currencyPrecise(employerContributionPerPaycheck, i18n.language)}
-              </span>
-            </div>
-          )}
 
           <div className="pt-3 border-t border-gray-200">
             <div className="flex justify-between items-center">

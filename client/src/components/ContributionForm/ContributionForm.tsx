@@ -7,20 +7,22 @@ import { AmountInput } from './AmountInput';
 import { ContributionType, AccountType, LoadingState } from '@/enums';
 import { Formatters } from '@/utils/formatters';
 import { CalculationUtils } from '@/utils/calculations';
-import type { ContributionSettings, UserProfile } from '@/types';
+import type { ContributionSettings, UserProfile, EmployerMatch } from '@/types';
 
 interface ContributionFormProps {
   profile: UserProfile;
   initialSettings: ContributionSettings;
   onUpdate: (settings: ContributionSettings) => Promise<void>;
   loadingState: LoadingState;
+  employerMatch: EmployerMatch;
 }
 
 export const ContributionForm: React.FC<ContributionFormProps> = ({
   profile,
   initialSettings,
   onUpdate,
-  loadingState
+  loadingState,
+  employerMatch
 }) => {
   const { t, i18n } = useTranslation();
   const [settings, setSettings] = useState(initialSettings);
@@ -34,6 +36,12 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
     settings,
     profile.salary
   );
+
+  const annualEmployerMatch = employerMatch.enabled
+    ? (annualContribution * employerMatch.matchPercentage / 100)
+    : 0;
+
+  const employerMatchPerPaycheck = annualEmployerMatch / 26;
 
   const handleTypeChange = (type: ContributionType) => {
     let newAmount = settings.amount;
@@ -94,12 +102,22 @@ export const ContributionForm: React.FC<ContributionFormProps> = ({
             <p className="text-lg sm:text-xl font-bold text-gray-900">
               {Formatters.currency(annualContribution, i18n.language)}
             </p>
+            {employerMatch.enabled && (
+              <p className="text-xs text-success mt-1">
+                +{Formatters.currency(annualEmployerMatch, i18n.language)} {t('contribution.employerMatch')}
+              </p>
+            )}
           </div>
           <div>
             <p className="text-sm text-gray-600">{t('contribution.perPaycheck')}</p>
             <p className="text-lg sm:text-xl font-bold text-gray-900">
               {Formatters.currency(annualContribution / 26, i18n.language)}
             </p>
+            {employerMatch.enabled && (
+              <p className="text-xs text-success mt-1">
+                +{Formatters.currency(employerMatchPerPaycheck, i18n.language)} {t('contribution.employerMatch')}
+              </p>
+            )}
           </div>
         </div>
 

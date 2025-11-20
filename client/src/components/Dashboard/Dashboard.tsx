@@ -24,7 +24,12 @@ export const Dashboard: React.FC = () => {
     updateContribution
   } = useContribution();
 
-  const { projection } = useProjections();
+  // Calculate annual contribution for projections
+  const annualContribution = contribution && profile
+    ? CalculationUtils.calculateAnnualContribution(contribution, profile.salary)
+    : 0;
+
+  const { projection } = useProjections(annualContribution || undefined, profile?.retirementAge);
 
   if (loadingState === LoadingState.LOADING && !profile) {
     return <LoadingSpinner />;
@@ -45,11 +50,6 @@ export const Dashboard: React.FC = () => {
       </div>
     );
   }
-
-  const annualContribution = CalculationUtils.calculateAnnualContribution(
-    contribution,
-    profile.salary
-  );
 
   // Compute paycheck impact if not available from API
   const currentPaycheckImpact = paycheckImpact || CalculationUtils.calculatePaycheckImpact(

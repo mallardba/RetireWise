@@ -37,7 +37,7 @@ export const PaycheckImpact: React.FC<PaycheckImpactProps> = ({
             </span>
           </div>
 
-          {impact.taxSavings > 0 && (
+          {impact.taxSavings >= 0 && (
             <div className="flex justify-between items-center text-sm border-l-2 border-success pl-3">
               <span className="text-gray-600">{t('paycheck.taxSavings')}</span>
               <span className="font-medium text-success">

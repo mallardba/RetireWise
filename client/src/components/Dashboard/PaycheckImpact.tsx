@@ -2,16 +2,19 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/Common/Card';
 import { Formatters } from '@/utils/formatters';
+import { AccountType } from '@/enums';
 import type { PaycheckImpact as PaycheckImpactType, PayFrequency } from '@/types';
 
 interface PaycheckImpactProps {
   impact: PaycheckImpactType;
   payFrequency: PayFrequency;
+  accountType: AccountType;
 }
 
 export const PaycheckImpact: React.FC<PaycheckImpactProps> = ({
   impact,
-  payFrequency
+  payFrequency,
+  accountType
 }) => {
   const { t, i18n } = useTranslation();
 
@@ -66,14 +69,16 @@ export const PaycheckImpact: React.FC<PaycheckImpactProps> = ({
             </div>
             <div className="flex-1">
               <p className="text-sm text-gray-700 dark:text-gray-300">
-                {impact.taxSavings > 0
-                  ? t('paycheck.savingsExplainer', {
-                      contribution: Formatters.currencyPrecise(impact.contribution, i18n.language),
-                      realCost: Formatters.currencyPrecise(impact.netImpact, i18n.language)
-                    })
-                  : t('paycheck.rothExplainer', {
-                      contribution: Formatters.currencyPrecise(impact.contribution, i18n.language)
-                    })
+                {(impact.contribution === 0 && accountType === AccountType.TRADITIONAL)
+                  ? t('paycheck.zeroContribution')
+                  : accountType === AccountType.TRADITIONAL
+                    ? t('paycheck.savingsExplainer', {
+                        contribution: Formatters.currencyPrecise(impact.contribution, i18n.language),
+                        realCost: Formatters.currencyPrecise(impact.netImpact, i18n.language)
+                      })
+                    : t('paycheck.rothExplainer', {
+                        contribution: Formatters.currencyPrecise(impact.contribution, i18n.language)
+                      })
                 }
               </p>
             </div>

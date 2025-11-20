@@ -57,7 +57,8 @@
     "yourContribution": "您的401(k)供款",
     "actualTakeHome": "您的实际实得工资",
     "savingsExplainer": "供款{{contribution}}实际只花费您{{realCost}}，多亏了税收节省！",
-    "rothExplainer": "您的{{contribution}}罗斯供款是税后的，因此没有即时税收节省。"
+    "rothExplainer": "您的{{contribution}}罗斯供款是税后的，因此没有即时税收节省。",
+    "zeroContribution": "供款$0.00不会为您节省任何税款。"
   },
   "paycheckDetails": {
     "title": "工资明细",

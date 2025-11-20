@@ -57,7 +57,8 @@
     "yourContribution": "Your 401(k) contribution",
     "actualTakeHome": "Your actual take-home",
     "savingsExplainer": "Contributing {{contribution}} only costs you {{realCost}} thanks to tax savings!",
-    "rothExplainer": "Your {{contribution}} Roth contribution is after-tax, so no immediate tax savings."
+    "rothExplainer": "Your {{contribution}} Roth contribution is after-tax, so no immediate tax savings.",
+    "zeroContribution": "Contributing $0.00 doesn't save you anything from taxes."
   },
   "paycheckDetails": {
     "title": "Paycheck Breakdown",

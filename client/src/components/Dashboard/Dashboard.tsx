@@ -96,6 +96,7 @@ export const Dashboard: React.FC = () => {
             <PaycheckImpact
               impact={currentPaycheckImpact}
               payFrequency={profile.payFrequency}
+              accountType={contribution.accountType}
             />
 
             {projection && (

@@ -57,7 +57,8 @@
     "yourContribution": "Su contribución 401(k)",
     "actualTakeHome": "Su pago neto real",
     "savingsExplainer": "¡Contribuir {{contribution}} solo le cuesta {{realCost}} gracias al ahorro fiscal!",
-    "rothExplainer": "Su contribución Roth de {{contribution}} es después de impuestos, sin ahorro fiscal inmediato."
+    "rothExplainer": "Su contribución Roth de {{contribution}} es después de impuestos, sin ahorro fiscal inmediato.",
+    "zeroContribution": "Contribuir $0.00 no le ahorra nada en impuestos."
   },
   "paycheckDetails": {
     "title": "Desglose del Cheque de Pago",

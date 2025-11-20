@@ -40,12 +40,17 @@
     "progress": "{{percent}}% del límite anual"
   },
   "paycheck": {
-    "title": "Impacto en el Cheque de Pago",
+    "title": "Impacto de la Contribución",
     "current": "Pago Neto Actual",
     "new": "Nuevo Pago Neto",
     "difference": "Diferencia",
     "taxSavings": "Ahorro Fiscal",
-    "perPeriod": "por {{period}}"
+    "perPeriod": "por {{period}}",
+    "without401k": "Pago sin 401(k)",
+    "yourContribution": "Su contribución 401(k)",
+    "actualTakeHome": "Su pago neto real",
+    "savingsExplainer": "¡Contribuir {{contribution}} solo le cuesta {{realCost}} gracias al ahorro fiscal!",
+    "rothExplainer": "Su contribución Roth de {{contribution}} es después de impuestos, sin ahorro fiscal inmediato."
   },
   "paycheckDetails": {
     "title": "Desglose del Cheque de Pago",

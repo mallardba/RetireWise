@@ -40,12 +40,17 @@
     "progress": "{{percent}}% of annual limit"
   },
   "paycheck": {
-    "title": "Paycheck Impact",
+    "title": "Contribution Impact",
     "current": "Current Take-Home",
     "new": "New Take-Home",
     "difference": "Difference",
     "taxSavings": "Tax Savings",
-    "perPeriod": "per {{period}}"
+    "perPeriod": "per {{period}}",
+    "without401k": "Take-home without 401(k)",
+    "yourContribution": "Your 401(k) contribution",
+    "actualTakeHome": "Your actual take-home",
+    "savingsExplainer": "Contributing {{contribution}} only costs you {{realCost}} thanks to tax savings!",
+    "rothExplainer": "Your {{contribution}} Roth contribution is after-tax, so no immediate tax savings."
   },
   "paycheckDetails": {
     "title": "Paycheck Breakdown",

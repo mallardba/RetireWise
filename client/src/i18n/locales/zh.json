@@ -40,12 +40,17 @@
     "progress": "年度限额的 {{percent}}%"
   },
   "paycheck": {
-    "title": "工资影响",
+    "title": "供款影响",
     "current": "当前实得工资",
     "new": "新实得工资",
     "difference": "差额",
     "taxSavings": "税收节省",
-    "perPeriod": "每 {{period}}"
+    "perPeriod": "每 {{period}}",
+    "without401k": "无401(k)时的实得工资",
+    "yourContribution": "您的401(k)供款",
+    "actualTakeHome": "您的实际实得工资",
+    "savingsExplainer": "供款{{contribution}}实际只花费您{{realCost}}，多亏了税收节省！",
+    "rothExplainer": "您的{{contribution}}罗斯供款是税后的，因此没有即时税收节省。"
   },
   "paycheckDetails": {
     "title": "工资明细",

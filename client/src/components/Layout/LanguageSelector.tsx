@@ -17,7 +17,7 @@ export const LanguageSelector: React.FC = () => {
         <button
           key={lang.code}
           onClick={() => i18n.changeLanguage(lang.code)}
-          className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors touch-manipulation ${
+          className={`px-2 sm:px-3 py-2 rounded-lg text-sm font-medium transition-colors touch-manipulation ${
             i18n.language === lang.code
               ? 'bg-primary text-white dark:bg-primary-light'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -25,8 +25,7 @@ export const LanguageSelector: React.FC = () => {
           aria-label={lang.name}
           title={lang.name}
         >
-          <span className="mr-1">{lang.flag}</span>
-          <span className="hidden sm:inline">{lang.label}</span>
+          {lang.flag}
         </button>
       ))}
     </div>

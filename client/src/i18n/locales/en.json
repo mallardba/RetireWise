@@ -1,0 +1,69 @@
+{
+  "app": {
+    "title": "401(k) Contribution Manager",
+    "subtitle": "Plan your retirement with confidence"
+  },
+  "header": {
+    "welcome": "Welcome, {{name}}!",
+    "language": "Language"
+  },
+  "contribution": {
+    "title": "Your Contribution",
+    "type": {
+      "label": "Contribution Type",
+      "percentage": "Percentage",
+      "dollar": "Dollar Amount"
+    },
+    "amount": {
+      "label": "Amount",
+      "placeholder": "Enter amount"
+    },
+    "accountType": {
+      "label": "Account Type",
+      "traditional": "Traditional 401(k)",
+      "roth": "Roth 401(k)",
+      "traditionalDesc": "Pre-tax contributions, taxed at withdrawal",
+      "rothDesc": "After-tax contributions, tax-free withdrawals"
+    },
+    "annual": "Annual Contribution",
+    "perPaycheck": "Per Paycheck",
+    "irsLimit": "IRS Annual Limit",
+    "remaining": "Remaining",
+    "save": "Update Contribution",
+    "saved": "Contribution updated successfully!"
+  },
+  "ytd": {
+    "title": "Year-to-Date",
+    "employee": "Your Contributions",
+    "employer": "Employer Match",
+    "total": "Total Contributions",
+    "progress": "{{percent}}% of annual limit"
+  },
+  "paycheck": {
+    "title": "Paycheck Impact",
+    "current": "Current Take-Home",
+    "new": "New Take-Home",
+    "difference": "Difference",
+    "taxSavings": "Tax Savings",
+    "perPeriod": "per {{period}}"
+  },
+  "projection": {
+    "title": "Retirement Projection",
+    "subtitle": "Based on {{rate}} average annual return",
+    "age": "Age {{age}}",
+    "balance": "Projected Balance",
+    "contributions": "Total Contributions",
+    "growth": "Investment Growth",
+    "yearsTo": "{{years}} years to retirement"
+  },
+  "errors": {
+    "loadFailed": "Failed to load data. Please try again.",
+    "saveFailed": "Failed to save contribution. Please try again.",
+    "networkError": "Network error. Please check your connection."
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}

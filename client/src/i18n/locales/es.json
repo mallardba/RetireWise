@@ -1,0 +1,69 @@
+{
+  "app": {
+    "title": "Administrador de Contribuciones 401(k)",
+    "subtitle": "Planifica tu jubilación con confianza"
+  },
+  "header": {
+    "welcome": "¡Bienvenido, {{name}}!",
+    "language": "Idioma"
+  },
+  "contribution": {
+    "title": "Tu Contribución",
+    "type": {
+      "label": "Tipo de Contribución",
+      "percentage": "Porcentaje",
+      "dollar": "Cantidad en Dólares"
+    },
+    "amount": {
+      "label": "Cantidad",
+      "placeholder": "Ingrese cantidad"
+    },
+    "accountType": {
+      "label": "Tipo de Cuenta",
+      "traditional": "401(k) Tradicional",
+      "roth": "401(k) Roth",
+      "traditionalDesc": "Contribuciones antes de impuestos",
+      "rothDesc": "Contribuciones después de impuestos"
+    },
+    "annual": "Contribución Anual",
+    "perPaycheck": "Por Cheque de Pago",
+    "irsLimit": "Límite Anual del IRS",
+    "remaining": "Restante",
+    "save": "Actualizar Contribución",
+    "saved": "¡Contribución actualizada!"
+  },
+  "ytd": {
+    "title": "Año hasta la Fecha",
+    "employee": "Tus Contribuciones",
+    "employer": "Contribución del Empleador",
+    "total": "Contribuciones Totales",
+    "progress": "{{percent}}% del límite anual"
+  },
+  "paycheck": {
+    "title": "Impacto en el Cheque de Pago",
+    "current": "Pago Neto Actual",
+    "new": "Nuevo Pago Neto",
+    "difference": "Diferencia",
+    "taxSavings": "Ahorro Fiscal",
+    "perPeriod": "por {{period}}"
+  },
+  "projection": {
+    "title": "Proyección de Jubilación",
+    "subtitle": "Basado en {{rate}} de retorno anual",
+    "age": "Edad {{age}}",
+    "balance": "Saldo Proyectado",
+    "contributions": "Contribuciones Totales",
+    "growth": "Crecimiento de Inversión",
+    "yearsTo": "{{years}} años hasta la jubilación"
+  },
+  "errors": {
+    "loadFailed": "Error al cargar datos.",
+    "saveFailed": "Error al guardar contribución.",
+    "networkError": "Error de red."
+  },
+  "common": {
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar"
+  }
+}

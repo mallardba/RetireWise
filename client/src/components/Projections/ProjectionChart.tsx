@@ -19,7 +19,7 @@ interface ProjectionChartProps {
 }
 
 export const ProjectionChart: React.FC<ProjectionChartProps> = ({ milestones }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const data = milestones.map(m => ({
     age: m.age,
@@ -56,7 +56,7 @@ export const ProjectionChart: React.FC<ProjectionChartProps> = ({ milestones }) 
           stroke={CHART_COLORS.PRIMARY}
           strokeWidth={3}
           dot={{ fill: CHART_COLORS.PRIMARY, r: 4 }}
-          name="Projected Balance"
+          name={t('projection.balance')}
         />
         <Line
           type="monotone"
@@ -65,7 +65,7 @@ export const ProjectionChart: React.FC<ProjectionChartProps> = ({ milestones }) 
           strokeWidth={2}
           strokeDasharray="5 5"
           dot={{ fill: CHART_COLORS.SUCCESS, r: 3 }}
-          name="Total Contributions"
+          name={t('projection.contributions')}
         />
       </LineChart>
     </ResponsiveContainer>

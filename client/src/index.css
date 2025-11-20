@@ -44,3 +44,59 @@
            touch-manipulation;
   }
 }
+
+@media print {
+  @page {
+    margin: 1cm;
+    size: letter;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  .card {
+    @apply bg-white border-gray-300 shadow-none;
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  /* Add title to print view */
+  @page {
+    @top-center {
+      content: "401(k) Contribution Summary";
+    }
+  }
+
+  /* Optimize layout for printing */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  /* Remove interactive elements */
+  button:not(.print\:block),
+  input[type="range"],
+  input[type="number"] {
+    display: none !important;
+  }
+
+  /* Show values instead of inputs */
+  .print\:show-value {
+    display: block !important;
+  }
+
+  /* Ensure charts print properly */
+  canvas {
+    max-width: 100%;
+    height: auto !important;
+  }
+}

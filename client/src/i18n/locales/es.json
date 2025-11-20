@@ -5,7 +5,8 @@
   },
   "header": {
     "welcome": "¡Bienvenido, {{name}}!",
-    "language": "Idioma"
+    "language": "Idioma",
+    "export": "Exportar como PDF"
   },
   "contribution": {
     "title": "Tu Contribución",

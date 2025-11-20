@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { LOCALES } from '@/constants';
 
 const LANGUAGE_OPTIONS = [
-  { code: LOCALES.EN, label: 'EN', flag: '🇺🇸' },
-  { code: LOCALES.ES, label: 'ES', flag: '🇪🇸' },
-  { code: LOCALES.ZH, label: '中文', flag: '🇨🇳' }
+  { code: LOCALES.EN, label: 'EN', flag: '🇺🇸', name: 'English' },
+  { code: LOCALES.ES, label: 'ES', flag: '🇪🇸', name: 'Español' },
+  { code: LOCALES.ZH, label: '中文', flag: '🇨🇳', name: '中文' }
 ];
 
 export const LanguageSelector: React.FC = () => {
@@ -19,10 +19,11 @@ export const LanguageSelector: React.FC = () => {
           onClick={() => i18n.changeLanguage(lang.code)}
           className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors touch-manipulation ${
             i18n.language === lang.code
-              ? 'bg-primary text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              ? 'bg-primary text-white dark:bg-primary-light'
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
           }`}
-          aria-label={lang.label}
+          aria-label={lang.name}
+          title={lang.name}
         >
           <span className="mr-1">{lang.flag}</span>
           <span className="hidden sm:inline">{lang.label}</span>

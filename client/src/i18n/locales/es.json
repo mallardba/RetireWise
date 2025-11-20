@@ -6,7 +6,9 @@
   "header": {
     "welcome": "¡Bienvenido, {{name}}!",
     "language": "Idioma",
-    "export": "Exportar como PDF"
+    "export": "Exportar como PDF",
+    "darkMode": "Alternar modo oscuro",
+    "changeLanguage": "Cambiar idioma"
   },
   "contribution": {
     "title": "Tu Contribución",

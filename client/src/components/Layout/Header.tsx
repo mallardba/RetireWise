@@ -41,7 +41,8 @@ export const Header: React.FC<HeaderProps> = ({ userName }) => {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={t('header.darkMode')}
+              title={t('header.darkMode')}
             >
               {theme === 'dark' ? (
                 <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20">

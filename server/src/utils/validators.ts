@@ -4,7 +4,7 @@ import { IRS_LIMITS, PERCENTAGE_LIMITS } from '../constants/index.js';
 
 export const ContributionSettingsSchema = z.object({
   type: z.nativeEnum(ContributionType),
-  amount: z.number().positive(),
+  amount: z.number().nonnegative(),
   accountType: z.nativeEnum(AccountType)
 }).refine((data) => {
   if (data.type === ContributionType.PERCENTAGE) {

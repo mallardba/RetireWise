@@ -30,6 +30,9 @@
     "employerMatch": "雇主匹配",
     "irsLimit": "IRS 年度限额",
     "remaining": "剩余",
+    "exceedsLimit": "超过 IRS 年度限额",
+    "overBy": "超出 {{amount}}。2024年限额为 {{limit}}。",
+    "cannotSaveOverLimit": "请减少供款以保存更改",
     "save": "更新供款",
     "saved": "供款更新成功！"
   },

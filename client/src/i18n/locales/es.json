@@ -30,6 +30,9 @@
     "employerMatch": "contribución del empleador",
     "irsLimit": "Límite Anual del IRS",
     "remaining": "Restante",
+    "exceedsLimit": "Excede el Límite Anual del IRS",
+    "overBy": "Excede por {{amount}}. El límite para 2024 es {{limit}}.",
+    "cannotSaveOverLimit": "Reduzca su contribución para guardar cambios",
     "save": "Actualizar Contribución",
     "saved": "¡Contribución actualizada!"
   },

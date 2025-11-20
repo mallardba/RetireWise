@@ -30,6 +30,9 @@
     "employerMatch": "employer match",
     "irsLimit": "IRS Annual Limit",
     "remaining": "Remaining",
+    "exceedsLimit": "Exceeds IRS Annual Limit",
+    "overBy": "You're over by {{amount}}. The limit for 2024 is {{limit}}.",
+    "cannotSaveOverLimit": "Reduce your contribution to save changes",
     "save": "Update Contribution",
     "saved": "Contribution updated successfully!"
   },
